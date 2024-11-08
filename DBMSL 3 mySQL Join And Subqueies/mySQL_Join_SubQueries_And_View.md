@@ -109,17 +109,17 @@ INSERT INTO sale VALUES(22, 100);
 ## Left Join BETWEEN Products AND Sale Tables
 
 ```sql
-SELECT products.pID,products.productName, sale.qty FROM products LEFT JOIN sale on products.pID = sale.pID;
+SELECT products.pID,products.pName, sale.qty FROM products LEFT JOIN sale on products.pID = sale.pID;
 ```
 
 ## Right Join BETWEEN Products AND Sale Tables
 
 ```sql
-SELECT products.pID,products.productName, sale.qty FROM products RIGHT JOIN sale on products.pID = sale.pID;
+SELECT products.pID,products.pName, sale.qty FROM products RIGHT JOIN sale on products.pID = sale.pID;
 ```
 
 ## Inner Join BETWEEN Products AND Sale Tables
 
 ```sql
-SELECT products.pID,products.productName, sale.qty FROM products INNER JOIN sale on products.pID = sale.pID;
+SELECT products.pID,products.pName, sale.qty FROM products INNER JOIN sale on products.pID = sale.pID;
 ```
