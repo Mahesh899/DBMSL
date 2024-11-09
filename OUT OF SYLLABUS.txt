@@ -1,0 +1,26 @@
+DECLARE
+   v_rows_updated NUMBER := 0;
+BEGIN
+   -- Update salaries for employees earning below 50000
+   UPDATE employees
+   SET salary = salary * 1.1
+   WHERE salary < 50000;
+   
+   -- Check how many rows were updated
+   v_rows_updated := SQL%ROWCOUNT;
+   
+   -- Raise an exception if no rows were updated
+   IF v_rows_updated = 0 THEN
+      RAISE_APPLICATION_ERROR(-20001, 'No employees found.');
+   END IF;
+   
+   -- Commit the transaction
+   COMMIT;
+   
+   DBMS_OUTPUT.PUT_LINE(v_rows_updated || ' employee(s) salary updated.');
+EXCEPTION
+   WHEN OTHERS THEN
+      ROLLBACK;
+      DBMS_OUTPUT.PUT_LINE(SQLERRM);
+END;
+/
