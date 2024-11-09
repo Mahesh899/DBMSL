@@ -25,31 +25,27 @@ CREATE TABLE Fine ( rollno INT, rdate DATE, amt INT );
 ### Insert Data in Borrow Table
 
 ```sql
-INSERT INTO Borrow VALUES (101, 'Ram', 'DBMS', '2024-10-01', 'i');
+INSERT INTO Borrow VALUES (101, 'Ram', 'DBMS', TO_DATE('2024-10-01', 'YYYY-MM-DD'), 'i');
 ```
 
 ```sql
-INSERT INTO Borrow VALUES (102, 'Hari', 'OOP', '2024-09-01', 'i');
+INSERT INTO Borrow VALUES (102, 'Hari', 'OOP', TO_DATE('2024-09-01', 'YYYY-MM-DD'), 'i');
 ```
 
 ```sql
-INSERT INTO Borrow VALUES (103, 'Om', 'DM', '2024-11-01', 'i');
+INSERT INTO Borrow VALUES (103, 'Om', 'DM', TO_DATE('2024-11-01', 'YYYY-MM-DD'), 'i');
 ```
 
 ```sql
-INSERT INTO Borrow VALUES (104, 'Adi', 'DELD', '2024-10-01', 'i');
+INSERT INTO Borrow VALUES (104, 'Adi', 'DELD', TO_DATE('2024-10-01', 'YYYY-MM-DD'), 'i');
 ```
 
 ```sql
-INSERT INTO Borrow VALUES (105, 'Mahesh', 'CNS', '2024-09-05', 'i');
+INSERT INTO Borrow VALUES (105, 'Mahesh', 'CNS', TO_DATE('2024-09-05', 'YYYY-MM-DD'), 'i');
 ```
 
 ```sql
-INSERT INTO Borrow VALUES (106, 'Sahil', 'CG', '2024-10-06', 'i');
-```
-
-```sql
-INSERT INTO Borrow VALUES (107, 'Akash', 'FDS', '2024-08-01', 'i');
+INSERT INTO Borrow VALUES (106, 'Sahil', 'CG', TO_DATE('2024-10-06', 'YYYY-MM-DD'), 'i');
 ```
 
 ### Now Commit to save the changes
@@ -110,8 +106,6 @@ EXCEPTION
         DBMS_OUTPUT.PUT_LINE('Multiple records found.');
 END;
 /
-
-
 ```
 
 ### Now run the file in sqlplus using the following command
