@@ -71,5 +71,8 @@ Executing mapReduced Function
 ```javascript
 db.bank.mapReduce(mapFunction, reduceFunction, { out: "total_balance" });
 ```
+```javascript
+db.total_balance.find();
+```
 
 
